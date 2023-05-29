@@ -1,5 +1,7 @@
-
 steps:
-  - label: ":pipeline:"
-    command: "buildkite-agent pipeline upload"
+- label: ":hammer: Example Script"
+    command: "script.sh"
+    artifact_paths: "artifacts/*"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
